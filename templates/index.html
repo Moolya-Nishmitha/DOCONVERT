@@ -1,12 +1,61 @@
-<!DOCKTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DOCONVERT <3</title>
-    </head>
-    <body>
-        <h1> DOCONVERT SAYS HIEEEEE <3 </h1>
-            <p> Convert your documents rnnn!!! </p>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCONVERT <3 </title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1> DOCONVERT </h1>
+        <p>Convert your documents in seconds! </p>
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2>Upload Your File</h2>
+
+            <form>
+
+                <input
+                    type="file"
+                    accept=".pdf,.doc,.docx">
+
+                <br><br>
+
+                <label for="conversion">
+                    Convert To
+                </label>
+
+                <br>
+
+                <select id="conversion">
+
+                    <option>PDF</option>
+
+                    <option>Word</option>
+
+                </select>
+
+                <br><br>
+
+                <button>
+
+                     Convert <3
+
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
 </html>
