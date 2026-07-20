@@ -1,22 +1,96 @@
-# DOCONVERT 🎀
+# 🎀 DOCONVERT
 
-A cute, pastel-themed document converter built with Flask.
+A cute, modern document conversion web app built with Flask.
 
-## Version 1 Features
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![Flask](https://img.shields.io/badge/Flask-Web_App-red)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-- Word (.docx) → PDF
-- PDF → Word
-- Simple drag-and-drop upload
-- Download converted files
+---
 
-## Tech Stack
+## ✨ Features
+
+- 📄 Word (.docx) → PDF
+- 📑 PDF → Word
+- 🎀 Modern Pink UI
+- 📂 Drag & Drop Upload
+- 🔒 Secure File Uploads
+- 🗑 Automatic File Cleanup
+- 📱 Responsive Design
+
+---
+
+## 🛠 Tech Stack
 
 - Python
 - Flask
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
+- docx2pdf
+- pdf2docx
 
-## Status
+---
 
-🚧 Currently in development.
+## 📁 Project Structure
+
+```
+DOCONVERT/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+│
+├── converters/
+│   ├── __init__.py
+│   ├── word_to_pdf.py
+│   └── pdf_to_word.py
+│
+├── uploads/
+├── outputs/
+│
+├── static/
+│   └── style.css
+│
+└── templates/
+    ├── index.html
+    └── result.html
+```
+
+---
+
+## 🚀 Installation
+
+```bash
+git clone https://github.com/YOUR_USERNAME/DOCONVERT.git
+
+cd DOCONVERT
+
+pip install -r requirements.txt
+
+py app.py
+```
+
+---
+
+## 📸 Preview
+
+(Add screenshots here)
+
+---
+
+## 🌱 Future Improvements
+
+- Excel Conversion
+- PowerPoint Conversion
+- Image Conversion
+- OCR Support
+- Merge PDFs
+- Compress PDFs
+- Watermark PDFs
+
+---
+
+## 👩‍💻 Author
+
+**Moolya Nishmitha**

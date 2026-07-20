@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conversion Complete</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="result-container">
+
+    <h1>🎉 Conversion Successful!</h1>
+
+    <p>Your file is ready.</p>
+
+    <div class="file-info">
+
+        <p>
+            <strong>Original</strong><br>
+            {{ original_file }}
+        </p>
+
+        <p>
+            <strong>Converted</strong><br>
+            {{ converted_file }}
+        </p>
+
+    </div>
+
+    <div class="button-group">
+
+        <a
+            href="{{ url_for('download', filename=converted_file) }}"
+            class="download-btn"
+        >
+            ⬇ Download
+        </a>
+
+        <button
+            class="again-btn"
+            id="againBtn"
+        >
+            🔄 Convert Another File
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+document
+.getElementById("againBtn")
+.addEventListener("click",()=>{
+
+    window.location.replace("/");
+
+});
+
+</script>
+
+</body>
+
+</html>

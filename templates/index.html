@@ -1,64 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOCONVERT <3 </title>
+    <title>DOCONVERT</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-    <header>
-        <h1> DOCONVERT </h1>
-        <p>Convert your documents in seconds! </p>
-    </header>
+<div class="background"></div>
 
-    <main>
+<div class="container">
 
-        <section>
+    <div class="card">
 
-            <h2>Upload Your File</h2>
+        <h1>🎀 DOCONVERT</h1>
 
-            <form action="/upload" method="POST" enctype="multipart/form-data">
+        <p class="subtitle">
+            Fast • Cute • Free
+        </p>
+
+        <form
+            action="/upload"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+
+            <div class="upload-box" id="dropArea">
 
                 <input
                     type="file"
+                    id="document"
                     name="document"
-                    accept=".pdf,.doc,.docx"
-                    required>
+                    accept=".pdf,.docx"
+                    required
+                >
 
-                <br><br>
+                <label for="document" id="dropText">
 
-                <label for="conversion">
-                    Convert To
+                    📂 Click or Drag & Drop a File Here
+
                 </label>
 
-                <br>
+            </div>
 
-                <select id="conversion" name="conversion">
-                
+            <select
+                name="conversion"
+                class="dropdown"
+                required
+            >
 
-                    <option value="pdf">PDF</option>
+                <option value="">Convert To...</option>
 
-                    <option value="word">Word</option>
+                <option value="pdf">
+                    Word ➜ PDF
+                </option>
 
-                </select>
+                <option value="word">
+                    PDF ➜ Word
+                </option>
 
-                <br><br>
+            </select>
 
-                <button type="submit">
+            <button
+                class="convert-btn"
+                type="submit"
+            >
+                ✨ Convert
+            </button>
 
-                     Convert <3
+        </form>
 
-                </button>
+    </div>
 
-            </form>
+</div>
 
-        </section>
+<script>
 
-    </main>
+const dropArea = document.getElementById("dropArea");
+const fileInput = document.getElementById("document");
+const dropText = document.getElementById("dropText");
+
+fileInput.addEventListener("change", () => {
+
+    if(fileInput.files.length > 0){
+
+        dropText.innerHTML =
+        "✅ " + fileInput.files[0].name;
+
+    }
+
+});
+
+dropArea.addEventListener("dragover", (e)=>{
+
+    e.preventDefault();
+
+    dropArea.classList.add("dragging");
+
+});
+
+dropArea.addEventListener("dragleave", ()=>{
+
+    dropArea.classList.remove("dragging");
+
+});
+
+dropArea.addEventListener("drop",(e)=>{
+
+    e.preventDefault();
+
+    dropArea.classList.remove("dragging");
+
+    fileInput.files = e.dataTransfer.files;
+
+    dropText.innerHTML =
+    "✅ " + e.dataTransfer.files[0].name;
+
+});
+
+</script>
 
 </body>
+
 </html>
