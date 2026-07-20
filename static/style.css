@@ -1,0 +1,78 @@
+/* Import a cute font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Quicksand',sans-serif;
+}
+
+body{
+    background:#fff5f8;
+    color:#5c4a52;
+    min-height:100vh;
+}
+
+header{
+    text-align:center;
+    padding:50px 20px;
+}
+
+header h1{
+    font-size:3rem;
+    color:#e56b93;
+}
+
+header p{
+    margin-top:10px;
+    font-size:1.1rem;
+}
+
+main{
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+section{
+    background:white;
+    width:450px;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+input,
+select,
+button{
+    width:100%;
+    padding:14px;
+    border-radius:12px;
+    border:none;
+    font-size:16px;
+}
+
+input,
+select{
+    background:#ffe6ef;
+    margin-top:10px;
+}
+
+button{
+    background:#f78fb3;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    background:#ef6f9a;
+}

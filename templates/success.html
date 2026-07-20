@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Successful 🎀</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <main>
+
+        <section>
+
+            <h1>🎀 Upload Successful!</h1>
+
+            <p>Your file has been uploaded.</p>
+
+            <br>
+
+            <p><strong>File:</strong> {{ filename }}</p>
+
+            <p><strong>Convert To:</strong> {{ conversion }}</p>
+
+            <br>
+
+            <a href="/">⬅ Upload Another File</a>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
