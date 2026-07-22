@@ -1,6 +1,6 @@
-# 🎀 DOCONVERT
+# DOCONVERT
 
-A cute, modern document conversion web app built with Flask.
+A document conversion web app built with Flask.
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue)
 ![Flask](https://img.shields.io/badge/Flask-Web_App-red)
@@ -8,15 +8,15 @@ A cute, modern document conversion web app built with Flask.
 
 ---
 
-## ✨ Features
+##  Features
 
-- 📄 Word (.docx) → PDF
-- 📑 PDF → Word
-- 🎀 Modern Pink UI
-- 📂 Drag & Drop Upload
-- 🔒 Secure File Uploads
-- 🗑 Automatic File Cleanup
-- 📱 Responsive Design
+-  Word (.docx) → PDF
+-  PDF → Word
+-  Pink UI
+-  Drag & Drop Upload
+-  Secure File Uploads
+-  Automatic File Cleanup
+-  Responsive Design
 
 ---
 
@@ -73,11 +73,6 @@ py app.py
 
 ---
 
-## 📸 Preview
-
-(Add screenshots here)
-
----
 
 ## 🌱 Future Improvements
 
